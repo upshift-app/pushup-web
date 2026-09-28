@@ -1,0 +1,50 @@
+/* Wordmark matching the app's PushupLogo: italic PUSHUP stacked over MINI GAMES. */
+.pmg-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  color: #fff;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+}
+.pmg-logo-top { font-style: italic; font-size: 20px; }
+.pmg-logo-bottom { font-size: 8.7px; letter-spacing: 1.05px; margin-top: -1px; }
+@media (min-width: 640px) {
+  .pmg-logo-top { font-size: 23px; }
+  .pmg-logo-bottom { font-size: 10px; letter-spacing: 1.2px; }
+}
+
+
+html { overflow-x: clip; }
+
+/* Shared navbar, identical on every page. */
+.site-nav { position: relative; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 24px; max-width: 1400px; margin: 0 auto; font-family: Manrope, system-ui, sans-serif; }
+@media (min-width: 640px) { .site-nav { padding: 24px; } }
+.site-nav-links { display: flex; align-items: center; gap: 24px; }
+.site-nav-links a { color: #9aa3b8; font-size: 1rem; text-decoration: none; transition: color .15s; }
+.site-nav-links a:hover, .site-nav-links a.active { color: #fff; }
+.site-nav-links a.site-nav-cta, .site-nav-menu a.site-nav-cta {
+  background: linear-gradient(135deg, #1E4FD8, #14246B); border: 1px solid rgba(255,255,255,.14); color: #fff; font-weight: 700; font-size: .9rem;
+  padding: 10px 24px; border-radius: 999px; transition: opacity .15s, transform .15s;
+}
+.site-nav-links a.site-nav-cta:hover { opacity: .9; transform: translateY(-1px); }
+.site-nav-toggle { display: none; background: none; border: 0; padding: 8px; cursor: pointer; }
+.site-nav-toggle span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; margin: 5px 0; transition: transform .2s, opacity .2s; }
+.site-nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.site-nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.site-nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.site-nav-menu {
+  position: absolute; top: 100%; left: 16px; right: 16px; display: flex; flex-direction: column; gap: 4px; padding: 12px;
+  border-radius: 20px; border: 1px solid rgba(255,255,255,.12); background: linear-gradient(135deg, #01050A, #050B19);
+  box-shadow: inset 0 2px 4px rgba(255,255,255,.08), 0 20px 50px rgba(0,0,0,.6);
+}
+.site-nav-menu[hidden] { display: none; }
+.site-nav-menu a { color: #fff; text-decoration: none; padding: 12px 14px; border-radius: 12px; font-weight: 600; }
+.site-nav-menu a:hover { background: rgba(255,255,255,.06); }
+.site-nav-menu a.site-nav-cta { text-align: center; margin-top: 6px; font-size: 1rem; }
+@media (max-width: 899px) {
+  .site-nav-links { display: none; }
+  .site-nav-toggle { display: block; }
+}
